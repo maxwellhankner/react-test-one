@@ -21,7 +21,7 @@ const AppWrapper = styled.div`
 `;
 
 export default function App() {
-  useInjectSaga({ key: 'mainPage', saga });
+  useInjectSaga({ key: 'App', saga });
 
   return (
     <AppWrapper>

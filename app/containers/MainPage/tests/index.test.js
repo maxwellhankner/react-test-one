@@ -17,6 +17,27 @@ describe('<MainPage />', () => {
     store = configureStore({}, browserHistory);
   });
 
+  it('should render and match the snapshot', () => {
+    const submitSpy = jest.fn();
+    const {
+      container: { firstChild },
+    } = render(
+      <Provider store={store}>
+        <IntlProvider locale="en">
+          <ConnectedRouter history={history}>
+            <MainPage
+              loading={false}
+              error={false}
+              data={false}
+              loadMyData={submitSpy}
+            />
+          </ConnectedRouter>
+        </IntlProvider>
+      </Provider>,
+    );
+    expect(firstChild).toMatchSnapshot();
+  });
+
   it('should fetch the words on mount', () => {
     const submitSpy = jest.fn();
     render(

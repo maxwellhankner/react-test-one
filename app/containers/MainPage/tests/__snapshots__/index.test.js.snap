@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MainPage /> should render and match the snapshot 1`] = `
+<div>
+  <h2>
+    <span>
+      List of very important words
+    </span>
+  </h2>
+  <div
+    class="Wrapper-sc-5dsnpv-0 dQithP"
+  >
+    <a
+      class="StyledLink-sc-7lpfxd-0 eXvIyo"
+      href="/add"
+      primary="true"
+    >
+      add a word
+    </a>
+  </div>
+</div>
+`;

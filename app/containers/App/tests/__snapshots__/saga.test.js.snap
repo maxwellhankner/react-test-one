@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getData Saga should call the dataLoadingError action if the response errors 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "combinator": false,
+  "payload": Object {
+    "args": Array [
+      "/api/data",
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+  "type": "CALL",
+}
+`;
+
+exports[`getData Saga should call the dataLoadingError action if the response errors 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "combinator": false,
+  "payload": Object {
+    "action": Object {
+      "data": Array [
+        "test",
+      ],
+      "type": "boilerplate/App/LOAD_DATA_SUCCESS",
+    },
+    "channel": undefined,
+  },
+  "type": "PUT",
+}
+`;
