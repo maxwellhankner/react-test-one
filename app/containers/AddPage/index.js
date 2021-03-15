@@ -22,8 +22,15 @@ import PageTitle from '../../components/PageTitle';
 import LoadingIndicator from '../../components/LoadingIndicator';
 import ValidationError from './ValidationError';
 import { validateWord } from './validateWord';
+import { makeSelectData } from '../App/selectors';
 
-export function AddPage({ word, addingWord, onChangeWord, onSubmitForm }) {
+export function AddPage({
+  word,
+  addingWord,
+  onChangeWord,
+  onSubmitForm,
+  wordArray,
+}) {
   useInjectReducer({ key: 'addPage', reducer });
   useInjectSaga({ key: 'addPage', saga });
 
@@ -31,7 +38,7 @@ export function AddPage({ word, addingWord, onChangeWord, onSubmitForm }) {
 
   const handleValidation = evt => {
     if (evt !== undefined && evt.preventDefault) evt.preventDefault();
-    const validation = validateWord(word);
+    const validation = validateWord(word, wordArray);
     if (validation) {
       setFormError(validation);
     } else {
@@ -76,11 +83,13 @@ AddPage.propTypes = {
   addingWord: PropTypes.bool,
   onChangeWord: PropTypes.func,
   onSubmitForm: PropTypes.func,
+  wordArray: PropTypes.array,
 };
 
 const mapStateToProps = createStructuredSelector({
   word: makeSelectWord(),
   addingWord: makeSelectAddingWord(),
+  wordArray: makeSelectData(),
 });
 
 function mapDispatchToProps(dispatch) {
