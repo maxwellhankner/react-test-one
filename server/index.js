@@ -17,7 +17,7 @@ const app = express();
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
 app.use(express.json());
 
-const fakeData = ['hello', 'foo', 'bar', 'world'];
+const fakeData = ['hello', 'foo', 'bar', 'world', 'test'];
 
 app.get('/api/data', (req, res) => {
   setTimeout(() => {
