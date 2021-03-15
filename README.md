@@ -1,9 +1,7 @@
-## Screen Test
-
-<dt>Instructions</dt>
+## Instructions
 
 Run `npm run start` to see the project.
 
-<dt>Comments</dt>
+## Comments
 
 This was fun.
