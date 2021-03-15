@@ -25,11 +25,8 @@ export default function App() {
 
   return (
     <AppWrapper>
-      <Helmet
-        titleTemplate="%s - React.js Boilerplate"
-        defaultTitle="React.js Boilerplate"
-      >
-        <meta name="description" content="A React.js Boilerplate application" />
+      <Helmet titleTemplate="Word List" defaultTitle="Word List">
+        <meta name="description" content="Create a list of words" />
       </Helmet>
       <Switch>
         <Route exact path="/" component={MainPage} />

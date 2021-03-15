@@ -37,7 +37,7 @@ export function MainPage({ data, loadMyData, loading, error }) {
     <div>
       <Helmet>
         <title>MainPage</title>
-        <meta name="description" content="Description of MainPage" />
+        <meta name="description" content="List of very important words" />
       </Helmet>
       <PageTitle>
         <FormattedMessage {...messages.header} />
@@ -61,7 +61,7 @@ const mapStateToProps = createStructuredSelector({
   error: makeSelectError(),
 });
 
-function mapDispatchToProps(dispatch) {
+export function mapDispatchToProps(dispatch) {
   return {
     loadMyData: () => dispatch(loadData()),
   };
